@@ -3,9 +3,12 @@ contains functions for parsing FASTA and FASTQ files, processing strings,
 and manipulaing and visualizing sequence datasets.
 """
 
+#contains functions from Johns Hopkins University's "Algorithms for DNA Sequencing" course on Coursera
+
 def readFASTA(filename):
     # parse and read FASTA file
     genome = ''
+
     with open(filename, 'r') as f:    
         for line in f:
             if line[0] != '>':
@@ -84,6 +87,7 @@ def findGCbyPos(reads):
 
 
 def countBase(string):
+    # return the number of each base present in the sequence
     counts = {'A' : 0, 'G' : 0, 'C' : 0 , 'T' : 0, 'N' : 0}
     
     for base in counts:
